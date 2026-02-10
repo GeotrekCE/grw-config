@@ -1,0 +1,93 @@
+export interface GlobalConfig {
+    api: string;
+    language: string;
+    districts?: number[];
+    themes?: number[];
+    practices?: number[];
+    structure?: number[];
+    city?: number[];
+    inBbox?: string;
+    portals?: number[];
+    routes?: number[];
+    labels?: number[];
+    colorPrimaryContainer?: string;
+    nameLayer?: string;
+    urlLayer?: string;
+    attributionLayer?: string;
+    treks?: boolean;
+    touristicContents?: boolean;
+    touristicEvents?: boolean;
+    outdoor?: boolean;
+    colorPrimaryApp?: string;
+    colorPrimary?: string;
+    colorOnPrimary?: string;
+    colorSurface?: string;
+    colorOnSurface?: string;
+    colorSurfaceVariant?: string;
+    colorOnSurfaceVariant?: string;
+    colorOnPrimaryContainer?: string;
+    colorSecondaryContainer?: string;
+    colorOnSecondaryContainer?: string;
+    colorBackground?: string;
+    colorSurfaceContainerHigh?: string;
+    colorSurfaceContainerLow?: string;
+    fabBackgroundColor?: string;
+    fabColor?: string;
+    rounded?: boolean;
+    colorTrekLine?: string;
+    colorSensitiveArea?: string;
+    colorMarkers?: string;
+    colorClusters?: string;
+    colorOutdoorArea?: string;
+    mainMarkerSize?: number;
+    selectedMainMarkerSize?: number;
+    mainClusterSize?: number;
+    commonMarkerSize?: number;
+    departureArrivalMarkerSize?: number;
+    pointReferenceMarkerSize?: number;
+    theme?: string;
+}
+
+export const DEFAULT_CONFIG: GlobalConfig = {
+    api: 'https://randoadmin.parc-haut-jura.fr/api/v2/',
+    language: 'fr',
+    nameLayer: 'IGN',
+    urlLayer: 'https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&STYLE=normal&FORMAT=image/png&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}',
+    attributionLayer: "<a target='_blank' href='https://ign.fr/'>IGN</a>",
+    treks: true,
+    touristicContents: false,
+    touristicEvents: false,
+    outdoor: false,
+    colorPrimaryApp: '#6750a4',
+    colorPrimary: '#6750a4',
+    colorOnPrimary: '#ffffff',
+    colorSurface: '#1c1b1f',
+    colorOnSurface: '#49454e',
+    colorSurfaceVariant: '#fef7ff',
+    colorOnSurfaceVariant: '#1c1b1f',
+    colorPrimaryContainer: '#eaddff',
+    colorOnPrimaryContainer: '#21005e',
+    colorSecondaryContainer: '#e8def8',
+    colorOnSecondaryContainer: '#1d192b',
+    colorBackground: '#fef7ff',
+    colorSurfaceContainerHigh: '#ece6f0',
+    colorSurfaceContainerLow: '#f7f2fa',
+    fabBackgroundColor: '#eaddff',
+    fabColor: '#21005d',
+    rounded: true,
+    colorTrekLine: '#6b0030',
+    colorSensitiveArea: '#4974a5',
+    colorMarkers: '#6750a4',
+    colorClusters: '#6750a4',
+    colorOutdoorArea: '#ffb700',
+    mainMarkerSize: 32,
+    selectedMainMarkerSize: 48,
+    mainClusterSize: 48,
+    commonMarkerSize: 48,
+    departureArrivalMarkerSize: 14,
+    pointReferenceMarkerSize: 24,
+    districts: [41],
+    // Filters defaults (optional, implicit as empty/undefined but explicit here if needed, 
+    // though usually optional fields are omitted from default if they are empty)
+    inBbox: '',
+};
