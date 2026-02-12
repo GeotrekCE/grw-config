@@ -142,7 +142,7 @@ export class ConfiguratorLayoutComponent implements OnInit {
       const newConfig: GlobalConfig = {
         api: params['api'] || DEFAULT_CONFIG.api,
         language: params['language'] || DEFAULT_CONFIG.language,
-        districts: parseArrayParam('districts', DEFAULT_CONFIG.districts),
+        districts: parseArrayParam('districts', (params['api'] && params['api'] !== DEFAULT_CONFIG.api) ? [] : DEFAULT_CONFIG.districts),
         themes: parseArrayParam('themes', DEFAULT_CONFIG.themes),
         practices: parseArrayParam('practices', DEFAULT_CONFIG.practices),
         structure: parseArrayParam('structure', DEFAULT_CONFIG.structure),
